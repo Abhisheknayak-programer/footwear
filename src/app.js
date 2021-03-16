@@ -49,6 +49,19 @@ app.post("/",async(req,res)=>{
 })
 
 
+
+app.get("/products",(req,res)=>{
+    res.render("Allproducts");
+})
+
+app.get("/info",(req,res)=>{
+    res.render("info");
+})
+
+app.get("/product1",(req,res)=>{
+    res.render("sampleProduct")
+})
+
 app.listen(port,()=>{
     console.log(`Your Port Is Running At http://localhost:8000/`)
 })
