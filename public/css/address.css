@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Philosopher:ital,wght@0,700;1,400&family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav{
+    z-index: 10;
+}
+
+/* Fonts Used Are In Commented Form Use This when You Need Changes */ 
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Philosopher', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
