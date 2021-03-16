@@ -5,7 +5,7 @@ const port = process.env.PORT || 8000;
 require("../db/conn");
 const hbs = require("hbs");
 const Subscribe = require("../models/subscribe");
-
+const UserInformation = require("../models/info");
 
 
 // Path Of The Folders
@@ -54,15 +54,36 @@ app.get("/products",(req,res)=>{
     res.render("Allproducts");
 })
 
-app.get("/info",(req,res)=>{
-    res.render("info");
-})
-
 app.get("/product1",(req,res)=>{
     res.render("sampleProduct")
 })
 
-// abit
+app.get("/info",(req,res)=>{
+    res.render("info");
+})
+
+app.get("/pay1",(req,res)=>{
+    res.render("pay1");
+})
+
+app.post("/info",async(req,res)=>{
+    try {
+        const UserData = new UserInformation({
+            name : req.body.name,
+            email : req.body.email,
+            phone : req.body.phone,
+            address : req.body.address
+        })
+
+        const dataSaver = await UserData.save();
+        res.status(201).render("pay1");
+        
+    } catch (error) {
+        res.render(error);
+    }
+})
+
+
 
 
 app.listen(port,()=>{
