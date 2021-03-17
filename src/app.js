@@ -72,6 +72,8 @@ app.post("/info",async(req,res)=>{
             name : req.body.name,
             email : req.body.email,
             phone : req.body.phone,
+            state : req.body.state,
+            pincode : req.body.pincode,
             address : req.body.address
         })
 

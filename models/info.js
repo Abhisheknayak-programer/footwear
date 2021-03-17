@@ -23,11 +23,21 @@ const InfoSchema = mongoose.Schema({
         minLength : 10,
         maxLength : 12
     },
+    state : {
+        type : String,
+        required : true,
+        lowercase : true
+    },
+    pincode : {
+        type : Number,
+        required : true
+    },
     address : {
         type : String,
         required : true,
         minLength : 10
     }
+    
 })
 
 
